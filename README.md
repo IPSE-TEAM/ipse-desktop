@@ -11,8 +11,8 @@
 
 - Mac - [ipse-desktop-0.8.0.dmg](https://github.com/IPSE-TEAM/ipse-desktop/releases/download/v0.8.0/ipse-desktop-0.8.0.dmg)
 - Windows - [ipse-desktop-setup-0.8.0.exe](https://github.com/IPSE-TEAM/ipse-desktop/releases/download/v0.8.0/ipse-desktop-setup-0.8.0.exe) 
-- Linux - [ipse-desktop-0.8.0-x86_64.AppImage](https://github.com/IPSE-TEAM/ipse-desktop/releases/download/v0.8.0/ipse-desktop-0.8.0-x86_64.AppImage)
-
+- Linux - [ipse-desktop-0.8.0-x86_64.AppImage]
+(https://github.com/IPSE-TEAM/ipse-desktop/releases/download/v0.8.0/ipse-desktop-0.8.0-linux-x86_64.AppImage)
 ### Install from Source
 
 To install it from source you need [Node.js](https://nodejs.org/en/) `>=10.4.0` and
