@@ -33,7 +33,7 @@ async function getPeerIdsData(n = 0) {
         var res = JSON.parse(body);
         if (res.Status === 201) {
           boostrapList = boostrapList.concat(res['Res'])
-          if (res['Cursor'] !== '0') {
+          if (res['Cursor'] !== 0) {
             getPeerIdsData(res['Cursor']);
           } else {
             resolve(boostrapList)
@@ -56,11 +56,21 @@ export default async function addPeerIdsToConfig(ipfsd) {
     logger.error(`[daemon] checkCorsConfig: error reading config file: ${err.message || err}`)
     return
   }
+  if (config.API && config.API.HTTPHeaders) {
+    config.API.HTTPHeaders['Access-Control-Allow-Methods'] = ['PUT', 'POST', 'GET']
+    config.API.HTTPHeaders['Access-Control-Allow-Origin'] = config.API.HTTPHeaders['Access-Control-Allow-Origin'] || []
+    const allowedOrigins = config.API.HTTPHeaders['Access-Control-Allow-Origin']
+    const ipseHost = 'https://ipse.io'
+    if (Array.isArray(allowedOrigins) && !allowedOrigins.includes(ipseHost)) {
+      config.API.HTTPHeaders['Access-Control-Allow-Origin'].push(ipseHost)
+    }
+  }
+  config.Addresses.Gateway = config.Addresses.Gateway.replace('127.0.0.1', '0.0.0.0')
   if (config.Bootstrap) {
     const bootstrap = config.Bootstrap
     if (Array.isArray(bootstrap)) {
       logger.info(`[ipse] original bootstrap length: ${bootstrap.length}`)
-      logger.info(`[ipse] getting the latest peerid data`)
+      logger.info(`[ipse] getting the latest peerid data...`)
       let newPeerids = await getPeerIdsData();
       if (Array.isArray(newPeerids)) {
         config.Bootstrap = bootstrap.concat([...new Set(newPeerids)])

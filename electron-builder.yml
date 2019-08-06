@@ -1,4 +1,4 @@
-appId: io.ipfs.desktop
+appId: io.ipse.desktop
 generateUpdatesFilesForAllChannels: true
 
 directories:
@@ -33,9 +33,9 @@ nsis:
 
 linux:
   artifactName: ${name}-${version}-${os}-${arch}.${ext}
-  executableName: ipfs-desktop
+  executableName: ipse-desktop
   category: Utility
-  synopsis: A desktop client for IPFS
+  synopsis: A desktop client for IPSE
   maintainer: henrique@protocol.ai
   target:
     - tar.xz
