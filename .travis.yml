@@ -1,0 +1,24 @@
+language: node_js
+
+node_js:
+  - 12.1.0
+
+os:
+  - linux
+  - osx
+
+before_script:
+  - |
+    if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
+      export DISPLAY=:99.0
+      sh -e /etc/init.d/xvfb start
+      sleep 3
+
+      sudo apt update
+      sudo apt install -y rpm
+    fi
+
+script:
+  - npm run test
+  - npm run lint
+  - npm run build

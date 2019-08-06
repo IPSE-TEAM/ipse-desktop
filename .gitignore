@@ -1,0 +1,9 @@
+node_modules
+out
+dist
+.cache
+config.gypi
+assets/webui
+*.nupkg
+*.bak
+assets/build/snap-hooks

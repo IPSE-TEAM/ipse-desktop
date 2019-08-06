@@ -1,0 +1,79 @@
+{
+  "ipfsIsRunning": "IPFS動作中",
+  "ipfsIsStopping": "IPFSを停止しています",
+  "ipfsIsStarting": "IPFSを起動しています",
+  "ipfsIsNotRunning": "IPFS停止中",
+  "ipfsHasErrored": "エラー",
+  "start": "起動",
+  "stop": "停止",
+  "restart": "再起動",
+  "about": "About",
+  "advanced": "詳細",
+  "openRepoDir": "リポジトリのフォルダを開く",
+  "openLogsDir": "ログのフォルダを開く",
+  "openConfigFile": "設定ファイルを開く",
+  "viewOnGitHub": "Githubを参照する",
+  "status": "状態",
+  "files": "ファイル",
+  "settings": "設定",
+  "quit": "閉じる",
+  "versions": "バージョン",
+  "screenshotTaken": "スクリーンショットが取得されました",
+  "shareableLinkCopied": "共有リンクをクリップボードにコピーされました。スクリーンショットを見るにはここをクリックしてください。",
+  "couldNotTakeScreenshot": "スクリーンショットを取得できませんでした",
+  "errorwhileTakingScreenshot": "スクリーンショット取得中にエラーが発生しました",
+  "yourFilesCouldntBeAdded": "ファイルが追加できませんでした。",
+  "folderAdded": "ファイルが追加されました",
+  "folderAddedToIpfsClickToView": "フォルダ { name } が追加されました。フォルダの参照はここをクリック。",
+  "fileAdded": "ファイルが追加されました",
+  "fileAddedToIpfsClickToView": "ファイル { name } がIPFSに共有されました。見るにはここをクリック。",
+  "clickToOpenLogs": "ログを開く",
+  "ipfsNotRunning": "IPFS停止中",
+  "desktopIsStartedButDaemonOffline": "IPFSデスクトップが起動されましたがデーモンが起動されていません。",
+  "cantDownloadHash": "ハッシュをダウンロードできませんでした",
+  "invalidHashProvided": "無効なハッシュです。",
+  "errorWhileDownloadingHash": "ハッシュの取得中にエラーが発生しました。",
+  "errorWhileWritingFiles": "あなたのファイルシステムへのファイル書き込み中にエラーが発生しました。",
+  "hashDownloaded": "ハッシュのダウンロードが完了しました",
+  "hashDownloadedClickToView": "ハッシュ { hash } のコンテンツをダウンロードしました。クリックしてください。",
+  "updateAvailable": "利用可能なアップデートがあります。",
+  "clickToInstall": "新しいバージョンのIPFSデスクトップをインストールするにはこちらをクリック。",
+  "updateNotAvailable": "利用可能なアップデートはありません",
+  "runningLatestVersion": "最新のバージョンを利用中です。",
+  "couldNotCheckForUpdates": "アップデートをチェックできませんでした。",
+  "pleaseCheckInternet": "インターネットへ接続されているか確認してください。",
+  "checkForUpdates": "アップデートを確認しています...",
+  "yes": "Yes",
+  "no": "No",
+  "close": "Close",
+  "ok": "OK",
+  "cancel": "Cancel",
+  "reportTheError": "Report the error",
+  "restartIpfsDesktop": "Restart IPFS Desktop",
+  "openLogs": "Open logs",
+  "anErrorHasOccurred": "An error has occurred",
+  "polkitDialog": {
+    "title": "Polkit not found",
+    "message": "IPFS can't be added to /usr/local/bin/ without polkit agent."
+  },
+  "noPermissionDialog": {
+    "title": "No permission",
+    "message": "IPFS couldn't be added to /usr/local/bin/, either because you entered the wrong password, or you denied permission."
+  },
+  "ipfsNotRunningDialog": {
+    "title": "IPFS停止中",
+    "message": "IPFS needs to be running to perform this action. Do you want to start the daemon?"
+  },
+  "recoverableErrorDialog": {
+    "title": "An error has occurred",
+    "message": "An error occurred but it does not prevent the execution of IPFS Desktop. You can either inspect the logs for yourself or report the error to the developers."
+  },
+  "cannotConnectToApiDialog": {
+    "title": "Cannot connect to API",
+    "message": "IPFS Desktop cannot connect to the API address provided: { addr }."
+  },
+  "ipfsDesktopHasShutdownDialog": {
+    "title": "IPFS Desktop has shutdown",
+    "message": "IPFS Desktop has shutdown because of an error. You can restart the app or report the error to the developers, which requires a GitHub account."
+  }
+}

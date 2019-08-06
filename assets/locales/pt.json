@@ -1,0 +1,79 @@
+{
+  "ipfsIsRunning": "O IPFS está a ser executado",
+  "ipfsIsStopping": "O IPFS está a ser parado",
+  "ipfsIsStarting": "O IPFS está a ser iniciado",
+  "ipfsIsNotRunning": "O IPFS não está a ser executado",
+  "ipfsHasErrored": "O IPFS teve um ou mais erros",
+  "start": "Iniciar",
+  "stop": "Parar",
+  "restart": "Reiniciar",
+  "about": "Sobre",
+  "advanced": "Avançado",
+  "openRepoDir": "Abrir diretório do repositório",
+  "openLogsDir": "Abrir diretório dos registos",
+  "openConfigFile": "Abrir ficheiro de configuração",
+  "viewOnGitHub": "Ver no GitHub",
+  "status": "Estado",
+  "files": "Ficheiros",
+  "settings": "Configurações",
+  "quit": "Sair",
+  "versions": "Versões",
+  "screenshotTaken": "Captura de ecrã tirada",
+  "shareableLinkCopied": "Link partilhável copiado para a área de transferência. Clique aqui para ver a captura de ecrã.",
+  "couldNotTakeScreenshot": "Não foi possível tirar a captura de ecrã",
+  "errorwhileTakingScreenshot": "Ocorreu um erro ao capturar o ecrã.",
+  "yourFilesCouldntBeAdded": "Os seus ficheiros não puderam ser adicionados.",
+  "folderAdded": "Pasta adicionada",
+  "folderAddedToIpfsClickToView": "Pasta { name } adicionada ao IPFS. Clique para ver a pasta.",
+  "fileAdded": "Ficheiro adicionado",
+  "fileAddedToIpfsClickToView": "Ficheiro { name } adicionado ao IPFS. Clique para ver o ficheiro.",
+  "clickToOpenLogs": "Clique para abrir os registos.",
+  "ipfsNotRunning": "O IPFS não está a ser executado",
+  "desktopIsStartedButDaemonOffline": "O IPFS Desktop está em execução, mas o daemon está desligado.",
+  "cantDownloadHash": "Não foi possível descarregar a hash",
+  "invalidHashProvided": "A hash fornecida não é válida.",
+  "errorWhileDownloadingHash": "Um erro ocorreu ao obter a hash.",
+  "errorWhileWritingFiles": "Um erro ocorreu enquanto guardávamos os ficheiros no seu computador.",
+  "hashDownloaded": "Hash descarregada",
+  "hashDownloadedClickToView": "O conteúdo da hash { hash } foi descarregado. Clique para ver.",
+  "updateAvailable": "Atualização disponível",
+  "clickToInstall": "Clique para reiniciar o IPFS Desktop e instalar a nova versão.",
+  "updateNotAvailable": "Atualização não disponível",
+  "runningLatestVersion": "Parece que tem a última versão instalada.",
+  "couldNotCheckForUpdates": "Não foi possível verificar a existência de atualizações",
+  "pleaseCheckInternet": "Por favor verifique se não tem problemas com a sua ligação à Internet.",
+  "checkForUpdates": "A verificar se existem atualizações...",
+  "yes": "Sim",
+  "no": "Não",
+  "close": "Fechar",
+  "ok": "OK",
+  "cancel": "Cancelar",
+  "reportTheError": "Reportar o erro",
+  "restartIpfsDesktop": "Reiniciar o IPFS Desktop",
+  "openLogs": "Abrir os registos",
+  "anErrorHasOccurred": "Ocorreu um erro",
+  "polkitDialog": {
+    "title": "Polkit não encontrado",
+    "message": "O IPFS não pode ser adicionado a /usr/local/bin/ sem o agente polkit."
+  },
+  "noPermissionDialog": {
+    "title": "Sem permissão",
+    "message": "Não foi possível adicionar o IPFS a /usr/local/bin/, por ter introduzido a palavra-passe errada ou porque negou a permissão."
+  },
+  "ipfsNotRunningDialog": {
+    "title": "O IPFS não está a ser executado",
+    "message": "O IPFS tem de estar a ser executado para fazer esta ação. Quer iniciar o daemon?"
+  },
+  "recoverableErrorDialog": {
+    "title": "Ocorreu um erro",
+    "message": "Ocorreu um erro mas este não impede a execução do IPFS Desktop. Pode inspecionar os registos ou reportar o erro aos programadores."
+  },
+  "cannotConnectToApiDialog": {
+    "title": "Não foi possível conectar à API",
+    "message": "O IPFS Desktop não consegue conectar ao endereço da API fornecido: { addr }."
+  },
+  "ipfsDesktopHasShutdownDialog": {
+    "title": "O IPFS Desktop desligou-se",
+    "message": "O IPFS Desktop desligou-se devido a um erro. Pode reiniciar a aplicação ou reportar o erro aos programadores, o que requer uma conta no GitHub."
+  }
+}
