@@ -41,7 +41,6 @@ linux:
     - tar.xz
     - AppImage
     - deb
-    - rpm
     - snap
 
 snap:

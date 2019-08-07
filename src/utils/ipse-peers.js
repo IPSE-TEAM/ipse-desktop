@@ -2,8 +2,9 @@
 import logger from './logger'
 import fs from 'fs-extra'
 import { join } from 'path'
-
 import request from 'request';
+import { app } from 'electron'
+const userDataPath = app.getPath('userData')
 
 function configPath(ipfsd) {
   return join(ipfsd.repoPath, 'config')
@@ -67,12 +68,31 @@ export default async function addPeerIdsToConfig(ipfsd) {
   }
   config.Addresses.Gateway = config.Addresses.Gateway.replace('127.0.0.1', '0.0.0.0')
   if (config.Bootstrap) {
-    const bootstrap = config.Bootstrap
+    var bootstrap = config.Bootstrap
     if (Array.isArray(bootstrap)) {
       logger.info(`[ipse] original bootstrap length: ${bootstrap.length}`)
-      logger.info(`[ipse] getting the latest peerid data...`)
+      logger.info(`[ipse] requesting the latest peerid data...`)
       let newPeerids = await getPeerIdsData();
       if (Array.isArray(newPeerids)) {
+
+        var oldSavedPeers = []
+        if (fs.existsSync(join(userDataPath, 'ipseSavedPeers.ipse'))) {
+          try {
+            oldSavedPeers = fs.readJsonSync(join(userDataPath, 'ipseSavedPeers.ipse'), 'utf-8')
+          } catch (error) {
+            logger.error(`[ipse]${error}`)
+            oldSavedPeers = []
+          }
+        }
+        // save new ipse Peersid
+        try {
+          fs.writeJSON(join(userDataPath, 'ipseSavedPeers.ipse'), newPeerids, 'utf-8')
+        } catch (error) {
+          logger.error(`[ipse]${error}`)
+        }
+        // remove last request data
+        bootstrap = bootstrap.filter(x => !oldSavedPeers.includes(x))
+        // remove the same data
         config.Bootstrap = bootstrap.concat([...new Set(newPeerids)])
         config.Bootstrap = [...new Set(config.Bootstrap)]
         logger.info(`[ipse] new bootstrap length: ${config.Bootstrap.length}`)
