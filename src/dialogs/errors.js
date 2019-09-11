@@ -38,7 +38,7 @@ export function criticalErrorDialog (e) {
   if (option === 0) {
     app.relaunch()
   } else if (option === 2) {
-    shell.openExternal(`https://github.com/ipfs-shipyard/ipfs-desktop/issues/new?body=${encodeURI(issueTemplate(e))}`)
+    shell.openExternal(`https://github.com/IPSE-TEAM/ipse-desktop/issues/new?body=${encodeURI(issueTemplate(e))}`)
   }
 
   app.exit(1)
@@ -57,7 +57,7 @@ export function recoverableErrorDialog (e) {
   })
 
   if (option === 1) {
-    shell.openExternal(`https://github.com/ipfs-shipyard/ipfs-desktop/issues/new?body=${encodeURI(issueTemplate(e))}`)
+    shell.openExternal(`https://github.com/IPSE-TEAM/ipse-desktop/issues/new?body=${encodeURI(issueTemplate(e))}`)
   } else if (option === 2) {
     shell.openItem(app.getPath('userData'))
   }

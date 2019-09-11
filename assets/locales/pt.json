@@ -31,7 +31,7 @@
   "ipfsNotRunning": "O IPFS não está a ser executado",
   "desktopIsStartedButDaemonOffline": "O IPFS Desktop está em execução, mas o daemon está desligado.",
   "cantDownloadHash": "Não foi possível descarregar a hash",
-  "invalidHashProvided": "A hash fornecida não é válida.",
+  "invalidHashClipboard": "The hash on the clipboard is not valid.",
   "errorWhileDownloadingHash": "Um erro ocorreu ao obter a hash.",
   "errorWhileWritingFiles": "Um erro ocorreu enquanto guardávamos os ficheiros no seu computador.",
   "hashDownloaded": "Hash descarregada",
@@ -52,6 +52,9 @@
   "restartIpfsDesktop": "Reiniciar o IPFS Desktop",
   "openLogs": "Abrir os registos",
   "anErrorHasOccurred": "Ocorreu um erro",
+  "takeScreenshot": "Tirar uma captura de ecrã",
+  "downloadHash": "Descarregar hash",
+  "moveRepositoryLocation": "Move Repository Location",
   "polkitDialog": {
     "title": "Polkit não encontrado",
     "message": "O IPFS não pode ser adicionado a /usr/local/bin/ sem o agente polkit."
@@ -75,5 +78,37 @@
   "ipfsDesktopHasShutdownDialog": {
     "title": "O IPFS Desktop desligou-se",
     "message": "O IPFS Desktop desligou-se devido a um erro. Pode reiniciar a aplicação ou reportar o erro aos programadores, o que requer uma conta no GitHub."
+  },
+  "moveRepositoryWarnDialog": {
+    "title": "Move repository",
+    "message": "If your repository is taking too much space on your main drive, you can move it to some other location. Bear in mind that the new location must always be available in order for IPFS Desktop to work correctly.",
+    "action": "Move and restart node"
+  },
+  "moveRepositorySuccessDialog": {
+    "title": "Repository moved successfully",
+    "message": "Your repository was successfully moved to { location } and your configuration was updated. The daemon will now start up again."
+  },
+  "moveRepositorySameDirDialog": {
+    "title": "Same directory selected",
+    "message": "The directory you picked is the same as the current one: { location }. Hence, no changes will be made."
+  },
+  "moveRepositoryDirExists": {
+    "title": " Directory already exists",
+    "message": "The directory { location } already exists. Please try using a different one."
+  },
+  "busyPortsDialog": {
+    "title": "Ports are busy",
+    "message": "The ports { port1 } and { port2 } are not available. Do you want to use { alt1 } and { alt2 } instead?",
+    "action": "Use ports { alt1 } and { alt2 } instead"
+  },
+  "busyPortDialog": {
+    "title": "Port is busy",
+    "message": "The port { port } is not available. Do you want to use { alt } instead?",
+    "action": "Use port { alt } instead"
+  },
+  "multipleBusyPortsDialog": {
+    "title": "Ports are busy",
+    "message": "Cannot bind to one or more of the API or Gateway addresses because the ports are busy.",
+    "action": "Open configuration file"
   }
 }

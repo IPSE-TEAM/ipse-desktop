@@ -50,6 +50,8 @@ snap:
     - network
     - network-bind
     - removable-media
+  publish:
+    - github
 
 publish:
   - github
