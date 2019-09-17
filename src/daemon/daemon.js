@@ -11,7 +11,7 @@ import getPort from 'get-port'
 import { showDialog } from '../dialogs'
 import store from '../common/store'
 import logger from '../common/logger'
-import addPeerIdsToConfig from '../ipse-peers';
+import addPeerIdsToConfig from '../ipse-peers'
 
 function cannotConnectDialog (addr) {
   showDialog({

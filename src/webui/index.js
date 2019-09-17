@@ -59,6 +59,8 @@ const createWindow = () => {
 }
 
 export default async function (ctx) {
+  openExternal()
+
   const window = createWindow(ctx)
   let apiAddress = null
 
@@ -77,6 +79,7 @@ export default async function (ctx) {
 
   const url = new URL('/', 'webui://-')
   url.hash = '/'
+  url.searchParams.set('deviceId', ctx.countlyDeviceId)
 
   function updateLanguage () {
     url.searchParams.set('lng', store.get('language'))
@@ -101,8 +104,6 @@ export default async function (ctx) {
     delete details.requestHeaders.Origin
     callback({ cancel: false, requestHeaders: details.requestHeaders }) // eslint-disable-line
   })
-
-  openExternal()
 
   return new Promise(resolve => {
     window.once('ready-to-show', () => {
